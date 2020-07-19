@@ -29,7 +29,6 @@ let formatData = (data) => {
   <div class="px-6 py-4">
     <span class="profile-info bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">${data.location}</span>
     <span class="profile-info bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Username: ${data.login}</span>
-    <span class="profile-info bg-gray-200 rounded-full px-3 py-1 text-sm font-semibold text-gray-700 mr-2">Followers: ${data.followers}</span>
   </div>
 </div>`;
 };
