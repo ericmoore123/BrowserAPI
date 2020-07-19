@@ -1,0 +1,35 @@
+* {
+  padding: none;
+  margin: none;
+  box-sizing: border-box;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-direction: column;
+}
+
+.bio-pos {
+  margin: 0 1.6rem;
+}
+
+.profile-link {
+  border: 2px solid #1f54c9;
+  border-radius: 5px;
+  padding: 0.3rem 0.5rem;
+  color: white;
+  background: #1f54c9;
+  float: right;
+}
+
+.profile-link:hover {
+  background: white;
+  color: #1f54c9;
+  transition: all 0.4s ease-in-out;
+}
+
+.profile-info {
+  cursor: default;
+}
