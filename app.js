@@ -7,6 +7,7 @@ document.addEventListener("DOMContentLoaded", () => {
   form.addEventListener("submit", async (event) => {
     event.preventDefault(); //Stops page reload on submit button press
     const username = document.querySelector("input").value;
+
     let response = await fetch(`https://api.github.com/users/${username}`).then(
       (successResponse) => {
         if (successResponse.status != 200) {
@@ -16,6 +17,7 @@ document.addEventListener("DOMContentLoaded", () => {
         }
       }
     );
+
     let userData = await response.json();
     formatData(userData);
   });
@@ -36,7 +38,7 @@ const goToProfile = (url) => {
 };
 
 let formatData = (data) => {
-  console.log(data);
+  // console.log(data);
   let infoArea = document.querySelector(".user-info-area");
   infoArea.innerHTML = `<div class="max-w-sm rounded overflow-hidden shadow-lg">
     <img class="w-full" src=${data.avatar_url} alt="${data.name} Info">
@@ -45,7 +47,7 @@ let formatData = (data) => {
         <a href="${data.html_url}" target="_blank" class="profile-link">Profile</a>
       </div>
     </div>
-    <p class="profile-info bio-pos w-full text-gray-700">
+    <p class="profile-info bio-pos text-gray-700">
         ${data.bio}
     </p>
     <div class="px-6 py-4">
