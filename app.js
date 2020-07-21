@@ -12,6 +12,7 @@ document.addEventListener("DOMContentLoaded", () => {
       (successResponse) => {
         if (successResponse.status != 200) {
           throw new Error("Error in data fetching");
+          alert("User not found");
         } else {
           return successResponse;
         }
